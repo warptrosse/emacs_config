@@ -26,7 +26,7 @@
 ;;-----------------------------------------------------------------------------;;
 ;; GLOBAL
 
-;; Lisp extensions folder (default = ~/.emacs.d).
+;; Lisp extensions folder (default = ~/.emacs.d/).
 (setq ext-folder user-emacs-directory)
 
 ;; Remove initial screen.
@@ -91,16 +91,16 @@
 ;; MODES
 
 ;; Cmake mode.
-(autoload 'cmake-mode (concat ext-folder "/cmake-mode/cmake-mode.el") t)
+(autoload 'cmake-mode (concat ext-folder "cmake-mode/cmake-mode.el") t)
 
 ;; JavaScript mode.
-(autoload 'js2-mode (concat ext-folder "/js2-mode/js2.el") t)
+(autoload 'js2-mode (concat ext-folder "js2-mode/js2.el") t)
 
 ;; Batch mode.
-(autoload 'dos-mode (concat ext-folder "/dos-mode/dos.el") t)
+(autoload 'dos-mode (concat ext-folder "dos-mode/dos.el") t)
 
 ;; PHP mode.
-(autoload 'php-mode (concat ext-folder "/php-mode/php-mode.el") t)
+(autoload 'php-mode (concat ext-folder "php-mode/php-mode.el") t)
 
 ;; Association between file extensions and emacs modes to be loaded.
 (setq-default auto-mode-alist
@@ -201,7 +201,7 @@
 (setq-default search-highlight t)
 
 ;; Color-theme.
-(add-to-list 'load-path (concat ext-folder "/color-theme"))
+(add-to-list 'load-path (concat ext-folder "color-theme"))
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
@@ -209,7 +209,7 @@
      (color-theme-hober)))
 
 ;; 80 Characters indicator.
-(add-to-list 'load-path (concat ext-folder "/fill-column-indicator"))
+(add-to-list 'load-path (concat ext-folder "fill-column-indicator"))
 (require 'fill-column-indicator)
 (setq-default fci-rule-width 1)
 (setq-default fci-rule-color "white")
@@ -256,7 +256,7 @@
 ;; TEMPLATES
 
 ;; yasnippet. A template system for Emacs.
-(add-to-list 'load-path (concat ext-folder "/yasnippet"))
+(add-to-list 'load-path (concat ext-folder "yasnippet"))
 (require 'yasnippet)
 (yas/global-mode t)
 ;;-----------------------------------------------------------------------------;;
@@ -266,8 +266,8 @@
 ;; CEDET
 
 ;; Load CEDET.
-(load-file (concat ext-folder "/cedet/cedet-devel-load.el"))
-(add-to-list 'load-path (concat ext-folder "/cedet/contrib"))
+(load-file (concat ext-folder "cedet/cedet-devel-load.el"))
+(add-to-list 'load-path (concat ext-folder "cedet/contrib"))
 
 ;; Enable Semantic features.
 (semantic-load-enable-minimum-features)
@@ -325,10 +325,10 @@
 (add-hook 'semantic-init-hooks (lambda() (imenu-add-to-menubar "TAGS")))
 
 ;; The name of the directory where SemanticDB cache files are saved.
-(setq-default semanticdb-default-save-directory (concat ext-folder "/tmp"))
+(setq-default semanticdb-default-save-directory (concat ext-folder "tmp"))
 
 ;; ECB.
-(add-to-list 'load-path (concat ext-folder "/ecb"))
+(add-to-list 'load-path (concat ext-folder "ecb"))
 (require 'ecb)
 (setq-default ecb-options-version "2.40")
 (setq-default ecb-tip-of-the-day nil)
